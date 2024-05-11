@@ -8,14 +8,14 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
   - $\omega,\phi\in[0,2\pi)$.
   - $\alpha_0=e^{i\omega}\cos(\theta/2)=\Braket{0|\psi}$.
   - $\alpha_1=e^{i\omega}e^{i\phi}\sin(\theta/2)=\Braket{1|\psi}$.
-  
+
 - Dual vector: $\Bra\psi=e^{-i\omega}(\cos(\theta/2)\Bra0+e^{-i\phi}\sin(\theta/2)\Bra1)=\alpha_0^*\Bra0+\alpha_1^*\Bra1=[\alpha_0^*~~\alpha_1^*]$.
 
 - Density Matrix: $\rho=\Ket\psi\Bra\psi\
   =\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}[\alpha_0^*~~\alpha_1^*]\
   =\begin{bmatrix}\alpha_0\alpha_0^*&\alpha_0\alpha_1^*\\\alpha_1\alpha_0^*&\alpha_1\alpha_1^*\end{bmatrix}\
   =\begin{bmatrix}\cos^2(\theta/2)&e^{-i\phi}\cos(\theta/2)\sin(\theta/2)\\e^{i\phi}\sin(\theta/2)\cos(\theta/2)&\sin^2(\theta/2)\end{bmatrix}$.
-  
+
 - $\Tr\rho=|\alpha_0|^2+|\alpha_1|^2=\cos^2(\theta/2)+\sin^2(\theta/2)=1$.
 
   - Alternative views:
@@ -27,7 +27,7 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
     - View 2: Braket notation
       - $\Tr\rho\
         =\Braket{0|\psi}\Braket{\psi|0}+\Braket{1|\psi}\Braket{\psi|1}\
-        =\Braket{\psi|0}\Braket{0|\psi}+\Braket{\psi|1}\Braket{1|\psi}$ 
+        =\Braket{\psi|0}\Braket{0|\psi}+\Braket{\psi|1}\Braket{1|\psi}$
         $=\Bra\psi(\Ket0\Bra0+\Ket1\Bra1)\Ket\psi\
         =\Braket{\psi|I|\psi}\
         =\Braket{\psi|\psi}\
@@ -54,37 +54,37 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
       - $\rho_{y-}=\frac{1}{2}(\Ket0\Bra0+i\Ket0\Bra1-i\Ket1\Bra0+\Ket1\Bra1)=\frac{1}{2}(I-Y)$.
       - $\rho_{z+}=\Ket0\Bra0=\frac{1}{2}(I+Z)$.
       - $\rho_{z-}=\Ket1\Bra1=\frac{1}{2}(I-Z)$.
-  
+
   - Mixed state
-  
+
     - $\rho'=\sum_i q_i\Ket{\psi_i}\Bra{\psi_i}$, where $\sum_i q_i=1$ and $\Braket{\psi_i|\psi_j}=\delta_{ij}$ (eigen decomposition).
-  
+
     - $\Tr\rho'\
       =\Tr\sum_i q_i\Ket{\psi_i}\Bra{\psi_i}\
       =\sum_i q_i\Tr\Ket{\psi_i}\Bra{\psi_i}\
       =\sum_i q_i\
       =1$.
-  
+
     - $\rho'^2\
-      =\sum_{i,j}q_iq_j\Ket{\psi_i}\Braket{\psi_i|\psi_j}\Bra{\psi_j}$ 
+      =\sum_{i,j}q_iq_j\Ket{\psi_i}\Braket{\psi_i|\psi_j}\Bra{\psi_j}$
       $=\sum_i q_i^2\Ket{\psi_i}\Braket{\psi_i|\psi_i}\Bra{\psi_i}+\sum_{i\ne j}q_iq_j\Ket{\psi_i}\Braket{\psi_i|\psi_j}\Bra{\psi_j}$.
-  
+
     - $\Tr\rho'^2\le\Tr\rho^2=1$ and equal only applies if there is only one term in $\rho'$.
-      
+
       - Note: $a_i\in[0,1),a_i^2\le a_i,\sum a_i^2\le \sum a_i$.
-  
+
       - Note: If $\rho_n$ contains $n$ unique states, $\lim_{n\to\infty}\Tr\rho_n=0$ (maximum mixed state).
         - Assume equal probably of $n$ states, so $q=1/n$ and $\sum q^2=n/n^2=1/n$.
-      
+
     - Example:
-    
+
       - $\rho'=\frac{1}{2}\Ket0\Bra0+\frac{1}{2}\Ket1\Bra1$.
-    
+
       - $\rho'^2\
-        =\frac{1}{4}(\Ket0\Braket{0|0}\Bra0+\Ket0\Braket{0|1}\Bra1+\Ket1\Braket{1|0}\Bra0+\Ket1\Braket{1|1}\Bra1)$ 
-    
+        =\frac{1}{4}(\Ket0\Braket{0|0}\Bra0+\Ket0\Braket{0|1}\Bra1+\Ket1\Braket{1|0}\Bra0+\Ket1\Braket{1|1}\Bra1)$
+
         $=\frac{1}{4}(\Ket0\Bra0+\Ket1\Bra1)=\frac{1}{4}I$.
-    
+
       - $\Tr\rho'^2=\frac{1}{2}$.
 
 
@@ -95,22 +95,22 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
   $\rho=\Ket\psi\Bra\psi\
   =\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}[\alpha_0^*~~\alpha_1^*]\
   =\begin{bmatrix}\alpha_0\alpha_0^*&\alpha_0\alpha_1^*\\\alpha_1\alpha_0^*&\alpha_1\alpha_1^*\end{bmatrix}\
-  =\begin{bmatrix}\cos^2(\theta/2)&e^{-i\phi}\cos(\theta/2)\sin(\theta/2)\\e^{i\phi}\sin(\theta/2)\cos(\theta/2)&\sin^2(\theta/2)\end{bmatrix}$ 
+  =\begin{bmatrix}\cos^2(\theta/2)&e^{-i\phi}\cos(\theta/2)\sin(\theta/2)\\e^{i\phi}\sin(\theta/2)\cos(\theta/2)&\sin^2(\theta/2)\end{bmatrix}$
 
 - $\rho\
-  =\begin{bmatrix}\frac{1}{2}(1+\cos\theta)&\frac{1}{2}(\cos\phi-i\sin\phi)\sin\theta\\\frac{1}{2}(\cos\phi+i\sin\phi)\sin\theta&\frac{1}{2}(1-\cos\theta)\end{bmatrix}$ 
+  =\begin{bmatrix}\frac{1}{2}(1+\cos\theta)&\frac{1}{2}(\cos\phi-i\sin\phi)\sin\theta\\\frac{1}{2}(\cos\phi+i\sin\phi)\sin\theta&\frac{1}{2}(1-\cos\theta)\end{bmatrix}$
   $=\frac{1}{2}\left(\
   \begin{bmatrix}1&0\\0&1\end{bmatrix}\
   +\cos\phi\sin\theta\begin{bmatrix}0&1\\1&0\end{bmatrix}\
   +\sin\phi\sin\theta\begin{bmatrix}0&-i\\i&0\end{bmatrix}+\
   \cos\theta\begin{bmatrix}1&0\\0&-1\end{bmatrix}\
-  \right)$ 
+  \right)$
   $=\frac{1}{2}(I+\mathbf r\cdot\mathbf \sigma)$.
   - Bloch vector: $\mathbf r=[\sin\theta\cos\phi~~\sin\theta\sin\phi~~\cos\theta]\in\mathbb R^3$
     - $|\mathbf r|^2=\sin^2\theta\cos^2\phi+\sin^2\theta\sin^2\phi+\cos^2\theta=1$.
-  
+
   - Pauli matrices: $\mathbf\sigma=[\sigma_x~~\sigma_y~~\sigma_z]$.
-  
+
 
 ## [Maximally Mixed State at Bloch Sphere Center](https://youtu.be/LUzdNjqr0jA)
 
@@ -144,10 +144,9 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
     - $\frac{1}{2}\le\Tr\rho^2\le 1$ as $0\le|r|^2\le 1$.
 
 
-
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -158,6 +157,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-

@@ -75,11 +75,9 @@
 - Hamiltonian $\mathcal H(\pmb p,\pmb q,t)=\sum_i p_i\dot q^i-\mathcal L(\pmb q,\pmb{\dot q},t)$
 
 
-
-
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -90,7 +88,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-### 

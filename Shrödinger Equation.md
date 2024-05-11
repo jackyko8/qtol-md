@@ -57,7 +57,7 @@
   - Solving $N\psi=0$
     - $\frac{1}{2}\left(-\nabla^2+\mathbf r^2-1\right)\psi=0$.
     - $(-\nabla^2+\mathbf r^2)\psi=\psi$.
-    - 
+    -
 
 
 
@@ -171,21 +171,19 @@ Ref: https://www.youtube.com/playlist?list=PL54DF0652B30D99A4
   - In both cases $\phi=i\cos(kx)e^{i\omega t}$ and $\phi=\cos(\omega t)e^{ikx}$:
     - First case:
       - $\mathbf p\Ket\phi=-i\hbar\nabla\Ket\phi=-i\hbar k\Ket\phi$.
-      - 
+      -
     - $\mathbf p^2\Ket\phi=-\hbar^2\nabla^2\Ket\phi=\hbar^2k^2\Ket\phi$.
     - ??
       - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}\Ket\phi=i\hbar(i\omega)\Ket\phi=-\hbar\omega\Ket\phi$
       - $=-i\hbar\omega\sin(\omega t)e^{ikx}$
       - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}i\cos(kx)e^{i\omega t}=-i\hbar \omega\cos(kx)e^{i\omega t}=-i\hbar\omega(\cos(kx)\cos(\omega t)+i\cos(kx)\sin(\omega t))$
       - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}\cos(\omega t)e^{ikx}=-i\hbar \omega\sin(\omega t)e^{ikx}=-i\hbar\omega(\cos(kx)\sin(\omega t)+i\sin(kx)\sin(\omega t))$
-      - 
-
-
+      -
 
 
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -196,7 +194,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-### 

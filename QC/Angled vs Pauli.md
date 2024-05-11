@@ -84,7 +84,7 @@ Ref: http://qtol.jackyko.org/information_theories/Rotation%20about%20Pauli%20Axe
 
 - The $R_x$ and $R_y$ phase gain across $\Ket1$ can be attributed to the $\Ket1$ "hole" in Bloch sphere:
   ![Bloch vs Hilbert](http://qtol.jackyko.org/information_theories/images/HilbertToBloch.png)
-  
+
 - $R_x(\theta)$:
 
   - A global phase is gained per $2\pi$ cycle starting from $\Ket0$:
@@ -101,11 +101,11 @@ Ref: http://qtol.jackyko.org/information_theories/Rotation%20about%20Pauli%20Axe
     | $4\pi$   | $\Ket0$                    | $1$   |
 
   - Gain a $-\pi/2$ phase on each side of $\Ket1$
-  
+
     - Gain a $-i$ phase approaching $\Ket1$ from $\theta\to\pi^-$.
     - Gain another $-i$ phase approaching $\Ket1$ from $\theta\to\pi^+$.
     - Accumulative phase gain across $\Ket1$ is $-1=(-i)^2$.
-  
+
 - $R_y(\theta)$:
 
   - A global phase is gained per $2\pi$ cycle starting from $\Ket0$:
@@ -120,7 +120,7 @@ Ref: http://qtol.jackyko.org/information_theories/Rotation%20about%20Pauli%20Axe
     | $3\pi$   | $-\Ket1$                 | $1$   |
     | $7\pi/2$ | $\Rsr2\Ket0-\Rsr2\Ket1$  | $1$   |
     | $4\pi$   | $\Ket0$                  | $1$   |
-    
+
   - Gain a $-\pi/2$ phase when "exiting" $\Ket1$ (approching from $\theta\to\pi^+$)
 
 - $R_z(\theta)$:
@@ -137,9 +137,9 @@ Ref: http://qtol.jackyko.org/information_theories/Rotation%20about%20Pauli%20Axe
     | $3\pi$   | $i\Rsr2\Ket0-i\Rsr2\Ket1$                                    | $i$              |
     | $7\pi/2$ | $(1/2+i/2)\Ket0+(1/2-i/2)\Ket1=\left(\Rsr2+\Rsr2 i\right)\left(\Rsr2\Ket0-\Rsr2 i\Ket1\right)$ | $\Rsr2+\Rsr2 i$  |
     | $4\pi$   | $\Rsr2\Ket0+\Rsr2\Ket1$                                      | $1$              |
-    
+
   - Gains a $-\theta/2$ phase continuously.
-  
+
     - $\mathrm{PhaseShift}$: $\begin{bmatrix}1&0\\0&e^{i\theta}\end{bmatrix}$.
     - $Z$-angled: $\begin{bmatrix}e^{-i\frac{\theta}{2}}&0\\0&e^{i\frac{\theta}{2}}\end{bmatrix}
       =e^{-i\frac{\theta}{2}}\begin{bmatrix}1&0\\0&e^{i\theta}\end{bmatrix}$.
@@ -284,18 +284,18 @@ From [Rotation Bloch Sphere](http://qtol.jackyko.org/information_theories/Rotati
       =\sum_{k=1}^nU\Ket{v_k}\Bra{v_k}
       =\sum_{k=1}^n\lambda_k\Ket{v_k}\Bra{v_k}
       .$
-  
+
 - The following is in `1_Running_quantum_circuits_on_simulators` as well:
   - $X$ with eigenbasis $\{+,-\}$ and eigenvalues $\{1,-1\}$.
   - $Y$ with eigenbasis $\left\{\Rsr2(\Ket0+i\Ket1),\Rsr2(\Ket0-i\Ket1)\right\}$ and eigenvalues $\{1,-1\}$.
   - $Z$ with eigenbasis $\{\Ket0,\Ket1\}$ and eigenvalues $\{1,-1\}$.
   - $H$ with eigenbasis $\left\{\sqrt{1-\Rsr2}\Big(\Ket0+\Rsr2(\Ket0+\Ket1)\Big),\sqrt{1-\Rsr2}\Big(\Ket1-\Rsr2(\Ket0-\Ket1)\Big)\right\}$ and eigenvalues $\{1,-1\}$.
-  
+
 - The process of a unitary operation $U$ on $\Ket\psi$:
   - eigendecompose $\Ket\psi$, i.e., $\Ket\psi=\sum_k\Ket{v_k}\Braket{v_k|\psi}$
   - scale each component by its corresponding eigenvalue, i.e., $\lambda_k\Ket{v_k}\Braket{v_k|\psi}$
   - combine them to get the result: $U\Ket\psi=\sum_k\lambda_k\Ket{v_k}\Braket{v_k|\psi}$
-  
+
 - Examples with $\Ket\psi=a\Ket0+b\Ket1$:
   - Eigendecompose $X=\Ket1\Bra0+\Ket0\Bra1=\Ket+\Bra+-\Ket-\Bra-=\frac{1}{2}\begin{bmatrix}1&1\\1&1\end{bmatrix}-\frac{1}{2}\begin{bmatrix}1&-1\\-1&1\end{bmatrix}=\begin{bmatrix}0&1\\1&0\end{bmatrix}$
     - $\Ket+\Braket{+|\psi}=\Rsr2(a+b)\Ket+$ and $\Ket-\Braket{-|\psi}=\Rsr2(a-b)\Ket-$.
@@ -303,11 +303,11 @@ From [Rotation Bloch Sphere](http://qtol.jackyko.org/information_theories/Rotati
   - Eigendecompose $Z=\Ket0\Bra0-\Ket1\Bra1=\begin{bmatrix}1&0\\0&-1\end{bmatrix}$
     - $\Ket0\Braket{0|\psi}=a\Ket0$ and $\Ket1\Braket{1|\psi}=b\Ket1$.
     - $Z\Ket\psi=a\Ket0-b\Ket1.$
-  
+
 - $U$ as an observable
-  
+
   - Measure the target state on $U$ so it collapses onto an eigenvector $\Ket{v_k}$ of $U$ with measurement $\lambda_k$.
-  
+
   - Expectation value: $\Braket{\psi|U|\psi}=\left(\sum_k\psi_k^*\Bra{v_k}\right)\sum_k\lambda_k\psi_k\Ket{v_k}=\sum_k\lambda_k|\psi_k|^2$.
     - Sum of probability measurements of $\Ket\psi$ on each eigenbasis vector scaled by its corresponding eigenvalue.
   - Examples
@@ -318,10 +318,10 @@ From [Rotation Bloch Sphere](http://qtol.jackyko.org/information_theories/Rotati
       - EV is therefore $\frac{1}{2}+\frac{1}{2}=1$
   - GHZ states EV
     - $0$ for GHZ states with odd qubits
-  
+
     - $1$ for GHZ states with even qubits
-  
-      
+
+
 
 ## Recall
 
@@ -453,11 +453,10 @@ When they measure different pairs for 11:
 In each experiment, probability of either 00 or 11 occurs is $\frac{1}{4}$.
 
 
-
 ---
 
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -468,7 +467,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-### 

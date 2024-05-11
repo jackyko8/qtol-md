@@ -25,10 +25,25 @@ Here we use $E$ to mean an expression.
   - Multiplication
     - $C_{ij}=(AB)_{ij}~~\rightarrow~~C^i_{~k}=A^i_{~j}B^j_{~k}$.
   - Trace
-    - $\Tr A=A^i_{~i}$.
+    - $\Tr A=A^i_{~i}$​.
 - Braket
   - $\Ket\psi=\psi^i$.
   - $\Bra\psi=\psi_i$ .
   - $\Braket{\psi|\phi}=\psi_j\phi^i$.
   - ??If $M=\Ket\phi\Bra\psi$, then $M^i_{~j}=\phi_i\psi_j$.
 
+---
+
+LaTeX
+
+$$
+\require{cancel}
+\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
+\newcommand{\Bra}[1]{\left\langle{#1}\right|}
+\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
+\newcommand{\RSR}[1]{1/\sqrt{#1}}
+\newcommand{\Verti}{\rvert}
+\newcommand{\HAT}[1]{\hat{\,#1~}}
+\newcommand{\Tr}{\mathrm{Tr}}
+$$

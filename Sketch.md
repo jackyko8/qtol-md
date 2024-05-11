@@ -99,12 +99,9 @@ Example: $\mathcal M_X:X\mapsto Z$, then $\mathcal M_X=ZX$
     - New software features -> open up reearch avenues
 
 
+---
 
-
-
-
-
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -115,8 +112,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-### 
-

@@ -47,11 +47,11 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     - Each atoms have $Z_I$ electrons.
     - All electrons of the molecule are indexed by $i$ and $j$.
   - Hamiltonian:
-  
+
     - $\displaystyle H=\sum_i\frac{\mathbf p_i^2}{2m}+\sum_I\frac{\mathbf P_I^2}{2M_I}+\sum_iV_{nucl}(\mathbf r_i)+\frac{1}{2}\sum_{i\ne j}\frac{e^2}{|\mathbf r_i-\mathbf r_j|}+\frac{1}{2}\sum_{I\ne J}\frac{Z_IZ_Je^2}{|\mathbf R_I-\mathbf R_J|}$.
     - Given $\mathbf p=-i\hbar\nabla$, $V_{nucl}(\mathbf r)=-\sum_I\frac{Z_Ie^2}{|\mathbf r-\mathbf R_I|}$, if we take $\hbar=1$, $m=1$ and $e=1$, the Hamiltonian can be simplified to
       - $\displaystyle H=-\sum_i\frac{\nabla_i^2}{2}-\sum_I\frac{\nabla_I^2}{2M_I}-\sum_{i,I}\frac{Z_I}{|\mathbf r_i-\mathbf R_I|}+\frac{1}{2}\sum_{i\ne j}\frac{1}{|\mathbf r_i-\mathbf r_j|}+\frac{1}{2}\sum_{I\ne J}\frac{Z_IZ_J}{|\mathbf R_I-\mathbf R_J|}$.
-      
+
         - The reciprocal distance terms is the Coulombic interaction.
     - Given nuclei are much heavier than electrons, we can "freeze" the nuclei at equilibrium in one position, so pure nuclei terms can be omitted ([Born-Oppenheimer](https://en.wikipedia.org/wiki/Born%E2%80%93Oppenheimer_approximation)), and the Hamiltonian can be further simplified to
       - $\displaystyle H=-\sum_i\frac{\nabla_i^2}{2}-\sum_{i,I}\frac{Z_I}{|\mathbf r_i-\mathbf R_I|}+\frac{1}{2}\sum_{i\ne j}\frac{1}{|\mathbf r_i-\mathbf r_j|}$.
@@ -186,7 +186,7 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
 - Jordan-Wigner encoding
 
   - Let $q_i=\Ket1$ represent orbital $i$ being occupied and $q_i=\Ket0$ being not.
-  - 
+  -
 - WORKING
 
   - For electron $p$, $a_p=\Rsr2(\nabla_p+\mathbf r_p)$ and $a_p^\dagger\Rsr2(-\nabla_p+\mathbf r_p)$.
@@ -195,7 +195,7 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     - $a_p\phi(\mathbf x)$ is the first excited state.
     - Also, $a_p^\dagger(a_p\phi(\mathbf x))=\phi(\mathbf x)$ will bring the excited state back to the ground state.
   - For electrons $p$ and $q$, exciting $p$ and exciting $q$ is distinguishable and therefore $\{a_p,a_q\}=\{a_p^\dagger,a_q^\dagger\}=\{a_p,a_q^\dagger\}=\{a_p^\dagger,a_q\}=0$ when $p\ne q$.
-  - From the 
+  - From the
     - $Ha_1\phi_1(\mathbf x)=(E_1+\Delta E)a_1\phi_1(\mathbf x)$.
     - If the next higher energy is orbital $\phi_2$, we have $H\phi_2(\mathbf x)=E_2\phi_2(\mathbf x)$.
     - By comparison, $a_1\phi_1(\mathbf x)=\phi_2(\mathbf x)$, and $a_1^\dagger\phi_2(\mathbf x)=\phi_1(\mathbf x)$.
@@ -209,7 +209,7 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
       - $H(a_p\phi_p(\mathbf x_i))=E_{n+1}H(a_p\phi_p(\mathbf x_i))$.
       - $H(a_p^\dagger\phi_p(\mathbf x_i))=E_{n-1}H(a_p^\dagger\phi_p(\mathbf x_i))$.
     - ??-nah $\{a_p,a_q\}=a_pa_q+a_qa_p=(a_q^\dagger a_p^\dagger+a_p^\dagger a_q^\dagger)^\dagger=\{a_q^\dagger,a_p^\dagger\}^\dagger=\{a_p^\dagger,a_q^\dagger\}^\dagger$.
-    - 
+    -
 - WORKING
 
   - ??Two electrons are represented by $a_p=\Ket{a_{p_{M-1}},\ldots,a_{p_0}}$ and $a_q=\Ket{a_{q_{M-1}},\ldots,a_{q_0}}$.
@@ -239,8 +239,6 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-###
 

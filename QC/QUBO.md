@@ -13,13 +13,9 @@ QUBO Ising solved by QAOA
   - Cost function: $\hat H_C=\sum_{i>j}J_{i,j}z_iz_j$, where $z_i$ is the $z$ measurement of qubit $i$ and $J$ is the weight (1 means connected)
 
 
-
-
-
-
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -30,6 +26,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-

@@ -17,7 +17,7 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
     - If both $b$ and $c$ are inverse element of $a$, then $b=b\bullet e=b\bullet(a\bullet c)=(b\bullet a)\bullet c=e\bullet c=c$.
   - Identity element is self-inverse but non-identity elements can be self-inverse too.
     - Example: In modular arithmetic $(\mathbb Z/2\mathbb Z,+)$, $0$ is the identity element, but both elements $0$ and $1$ are self-inverse. $0+0\equiv0\mod 2$ and $1+1\equiv0\mod 2$.
-- Examples: $(\mathbb Z,+),(\mathbb R,+),(\mathbb C,+),(\mathbb R\backslash\{0\},\times),(\mathbb C\backslash\{0\},\times)$ 
+- Examples: $(\mathbb Z,+),(\mathbb R,+),(\mathbb C,+),(\mathbb R\backslash\{0\},\times),(\mathbb C\backslash\{0\},\times)$
 - Abelian Group
   - Commutativity: $\forall a,b\in G,a\bullet b=b\bullet a$.
 
@@ -88,7 +88,7 @@ Preparation:
 
 - [Normed vector space](https://en.wikipedia.org/wiki/Normed_vector_space)
 
-  - 
+  -
 
 - [Quotient space](https://en.wikipedia.org/wiki/Quotient_space_(linear_algebra))
 
@@ -132,8 +132,8 @@ In order to continue the discussion, we need to add the following axiomatic prop
 - Both $(V,+,\times)$ and $(F,+,\cdot)$ are [normed vector space](https://en.wikipedia.org/wiki/Normed_vector_space)
   - Norm: $x\mapsto\lVert x\rVert$
 - $R$ is an ordered field:
-  - Field $(R,+\times)$ 
-  - Less-than relation $\lt$ 
+  - Field $(R,+\times)$
+  - Less-than relation $\lt$
     - $\forall a,b\in R$, exactly one holds: $a\lt b,a=b,b\lt a$.
     - Transitivity: $a\lt b\and b\lt c\Rightarrow a\lt c$.
     - If $a\lt b$, then $a+c\lt b+c$.
@@ -177,12 +177,9 @@ Following the previous discussion of $V$ and $F$.
     - ??Multiply $(\Braket{u|w})^{-1}$ on both sides.
 
 
-
-
-
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -193,6 +190,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-

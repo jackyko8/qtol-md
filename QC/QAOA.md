@@ -52,15 +52,15 @@
       ```
          0: ──H──RZ(0.5)──H──H──╭RZ(0.25)──H──
          1: ─────RZ(0.5)─────H──╰RZ(0.25)──H──
-        
+
             ──H──RZ(0.5)──H──H──╭RZ(0.25)──H──
             ─────RZ(0.5)─────H──╰RZ(0.25)──H─
-        
+
             ──H──RZ(0.5)──H──H──╭RZ(0.25)──H─
             ─────RZ(0.5)─────H──╰RZ(0.25)──H─
-        
-            ──H──RZ(0.5)──H──H──╭RZ(0.25)──H──┤ ⟨Z⟩ 
-            ─────RZ(0.5)─────H──╰RZ(0.25)──H──┤ ⟨Z⟩ 
+
+            ──H──RZ(0.5)──H──H──╭RZ(0.25)──H──┤ ⟨Z⟩
+            ─────RZ(0.5)─────H──╰RZ(0.25)──H──┤ ⟨Z⟩
       ```
 
 - QAOA
@@ -106,15 +106,11 @@
       - Set bounds: $\gamma\in(0,2\pi)$ and $\beta\in(0,\pi)$.
       - `minimize(objective_function, params0, args, options, method, bounds)`
       - Return the results
-  
-  
-
-
 
 
 ---
 
-### jko
+LaTeX
 
 $$
 \require{cancel}
@@ -125,7 +121,5 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
-
-### 

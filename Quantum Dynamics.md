@@ -13,14 +13,14 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
     - Sum of all amplitudes $\int_{-\infty}^\infty|\Psi(x)|^2dx=1$.
     - The absolute value accounts for "waving" (in a non-zero energy system) - both real and imaginary parts are included.
     - For a stationary system of a known position ("waving" or not), $|\Psi(x)|^2$ is the probability of measuring the position at $x$.
-    
+
       - $\hat x$ is a Dirac delta operator that is equal to $x$ at position $x$ and zero everywhere else: $\delta_a(x)=\lim_{a\to 0}\frac{1}{|a|\sqrt\pi}e^{-(x/a)^2}$.
       - ?$x$ is the only eigenvalue of $\hat x$​, hence the only possible measurement.
     - For a system of superposition of positions, $\Psi$ is a (normalised) linear combination of Dirac delta functions of distinct $x$ (may have a different phase each).
       - Example: A balanced superposition of two positions, with a phase difference $\phi$: $\Psi(x)=\frac{1}{\sqrt{2}}\left[\delta(x-x_1)+e^{i\phi}\delta(x-x_2)\right]$​.
-    
+
       - For a continuous probability distribution, $\Psi(x)=\psi(x)\delta(x)$, where $\psi(x)=|\Psi(x)|^2$, the probability of measuring $x$. For example, $\psi(x)=\mathcal N(x_0,\sigma^2)$, a normal distribution around $x_0$ with standard deviation of $\sigma$ (the spread around $x_0$).
-    
+
     - ??Measurement: "entangle" an apparatus with an $\hat x$ basis in range $[x_1,x_2]$, which is a superposition (of infinite dimension) of $\delta(x)$.
       - ??If the position is outside of $[x_1,x_2]$, the measurement is nil.
   - Momentum operator: $\hat p\Psi=-i\hbar\frac{\partial}{\partial x}\Psi$.
@@ -114,7 +114,7 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
       - $\boxed{\psi_n=\sqrt{2/L}\sin(n\pi x/L)}$.
     - $E_n=\frac{\hbar^2k^2}{2m}$.
     - $\boxed{E_n=\hbar\omega_n=\frac{n^2\pi^2\hbar^2}{2mL^2}}$
-    - 
+    -
 
 ### Hamiltonian operator
 
@@ -122,11 +122,11 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
   - To manipulating a quantum system by the way of a Hamiltonian operator
     - Applying certain "influence" over time to change the state of the system
     - The energy of the system may remain a constant
-  
+
   - Define an observable, the *Hamiltonian* operator, $\hat H\equiv-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial{x^2}}+V(x,t)$
   - $\displaystyle i\hbar\frac{\partial}{\partial t}\Ket{\Psi(t)}=\hat H\Ket{\Psi(t)}=E\Ket{\Psi(t)}$.
     - $i\hbar\dot\psi=H\psi$ on Schrödinger's gravestone (the simplest form possible)
-  
+
 - Time-independent Hamiltonian
   - The Hamiltonian remains constant over time.
   - The observable $\hat H$ corresponds to energy, so its eigenvalues are energies observed (as a spectrum of probabilities).
@@ -234,7 +234,6 @@ $$
 \newcommand{\RSR}[1]{1/\sqrt{#1}}
 \newcommand{\Verti}{\rvert}
 \newcommand{\HAT}[1]{\hat{\,#1~}}
-\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\Tr}{\mathrm{Tr}}
 $$
 
-### 

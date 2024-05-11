@@ -4,14 +4,14 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
 
 ## [Density Matrix for Pure Qubit States](https://youtu.be/kqnMgQzjLmQ)
 
-- A pure state in general form: $\Ket\psi=e^{i\omega}(\cos(\theta/2)\Ket0+e^{i\phi}\sin(\theta/2)\Ket1)=\alpha_0\Ket0+\alpha_1\Ket1=\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}$.
+- A pure state in general form: $\ket\psi=e^{i\omega}(\cos(\theta/2)\ket0+e^{i\phi}\sin(\theta/2)\ket1)=\alpha_0\ket0+\alpha_1\ket1=\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}$.
   - $\omega,\phi\in[0,2\pi)$.
-  - $\alpha_0=e^{i\omega}\cos(\theta/2)=\Braket{0|\psi}$.
-  - $\alpha_1=e^{i\omega}e^{i\phi}\sin(\theta/2)=\Braket{1|\psi}$.
+  - $\alpha_0=e^{i\omega}\cos(\theta/2)=\braket{0|\psi}$.
+  - $\alpha_1=e^{i\omega}e^{i\phi}\sin(\theta/2)=\braket{1|\psi}$.
 
-- Dual vector: $\Bra\psi=e^{-i\omega}(\cos(\theta/2)\Bra0+e^{-i\phi}\sin(\theta/2)\Bra1)=\alpha_0^*\Bra0+\alpha_1^*\Bra1=[\alpha_0^*~~\alpha_1^*]$.
+- Dual vector: $\bra\psi=e^{-i\omega}(\cos(\theta/2)\bra0+e^{-i\phi}\sin(\theta/2)\bra1)=\alpha_0^*\bra0+\alpha_1^*\bra1=[\alpha_0^*~~\alpha_1^*]$.
 
-- Density Matrix: $\rho=\Ket\psi\Bra\psi\
+- Density Matrix: $\rho=\ket\psi\bra\psi\
   =\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}[\alpha_0^*~~\alpha_1^*]\
   =\begin{bmatrix}\alpha_0\alpha_0^*&\alpha_0\alpha_1^*\\\alpha_1\alpha_0^*&\alpha_1\alpha_1^*\end{bmatrix}\
   =\begin{bmatrix}\cos^2(\theta/2)&e^{-i\phi}\cos(\theta/2)\sin(\theta/2)\\e^{i\phi}\sin(\theta/2)\cos(\theta/2)&\sin^2(\theta/2)\end{bmatrix}$.
@@ -26,48 +26,48 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
 
     - View 2: Braket notation
       - $\Tr\rho\
-        =\Braket{0|\psi}\Braket{\psi|0}+\Braket{1|\psi}\Braket{\psi|1}\
-        =\Braket{\psi|0}\Braket{0|\psi}+\Braket{\psi|1}\Braket{1|\psi}$
-        $=\Bra\psi(\Ket0\Bra0+\Ket1\Bra1)\Ket\psi\
-        =\Braket{\psi|I|\psi}\
-        =\Braket{\psi|\psi}\
+        =\braket{0|\psi}\braket{\psi|0}+\braket{1|\psi}\braket{\psi|1}\
+        =\braket{\psi|0}\braket{0|\psi}+\braket{\psi|1}\braket{1|\psi}$
+        $=\bra\psi(\ket0\bra0+\ket1\bra1)\ket\psi\
+        =\braket{\psi|I|\psi}\
+        =\braket{\psi|\psi}\
         =|\psi|^2$.
 
 - Hermitian
 
-  - $\rho^\dagger=(\Ket\psi\Bra\psi)^\dagger=\Ket\psi\Bra\psi=\rho$.
+  - $\rho^\dagger=(\ket\psi\bra\psi)^\dagger=\ket\psi\bra\psi=\rho$.
 
 - Pureness test
 
   - Pure state
 
-    - $\rho^2=\Ket\psi\Braket{\psi|\psi}\Bra\psi=\Ket\psi\Bra\psi=\rho$.
+    - $\rho^2=\ket\psi\braket{\psi|\psi}\bra\psi=\ket\psi\bra\psi=\rho$.
     - Implying $\rho^n=\rho$.
     - Example:
-      - $\Ket\psi=\Rsr2(\Ket0+\Ket1)$.
-      - $\rho=\Ket\psi\Bra\psi=\frac{1}{2}(I+X)$.
+      - $\ket\psi=\Rsr2(\ket0+\ket1)$.
+      - $\rho=\ket\psi\bra\psi=\frac{1}{2}(I+X)$.
       - $\Tr\rho=1$.
     - Pauli pure states
-      - $\rho_{x+}=\frac{1}{2}(\Ket0\Bra0+\Ket0\Bra1+\Ket1\Bra0+\Ket1\Bra1)=\frac{1}{2}(I+X)$.
-      - $\rho_{x-}=\frac{1}{2}(\Ket0\Bra0-\Ket0\Bra1+\Ket1\Bra0-\Ket1\Bra1)=\frac{1}{2}(I-X)$.
-      - $\rho_{y+}=\frac{1}{2}(\Ket0\Bra0-i\Ket0\Bra1+i\Ket1\Bra0+\Ket1\Bra1)=\frac{1}{2}(I+Y)$.
-      - $\rho_{y-}=\frac{1}{2}(\Ket0\Bra0+i\Ket0\Bra1-i\Ket1\Bra0+\Ket1\Bra1)=\frac{1}{2}(I-Y)$.
-      - $\rho_{z+}=\Ket0\Bra0=\frac{1}{2}(I+Z)$.
-      - $\rho_{z-}=\Ket1\Bra1=\frac{1}{2}(I-Z)$.
+      - $\rho_{x+}=\frac{1}{2}(\ket0\bra0+\ket0\bra1+\ket1\bra0+\ket1\bra1)=\frac{1}{2}(I+X)$.
+      - $\rho_{x-}=\frac{1}{2}(\ket0\bra0-\ket0\bra1+\ket1\bra0-\ket1\bra1)=\frac{1}{2}(I-X)$.
+      - $\rho_{y+}=\frac{1}{2}(\ket0\bra0-i\ket0\bra1+i\ket1\bra0+\ket1\bra1)=\frac{1}{2}(I+Y)$.
+      - $\rho_{y-}=\frac{1}{2}(\ket0\bra0+i\ket0\bra1-i\ket1\bra0+\ket1\bra1)=\frac{1}{2}(I-Y)$.
+      - $\rho_{z+}=\ket0\bra0=\frac{1}{2}(I+Z)$.
+      - $\rho_{z-}=\ket1\bra1=\frac{1}{2}(I-Z)$.
 
   - Mixed state
 
-    - $\rho'=\sum_i q_i\Ket{\psi_i}\Bra{\psi_i}$, where $\sum_i q_i=1$ and $\Braket{\psi_i|\psi_j}=\delta_{ij}$ (eigen decomposition).
+    - $\rho'=\sum_i q_i\ket{\psi_i}\bra{\psi_i}$, where $\sum_i q_i=1$ and $\braket{\psi_i|\psi_j}=\delta_{ij}$ (eigen decomposition).
 
     - $\Tr\rho'\
-      =\Tr\sum_i q_i\Ket{\psi_i}\Bra{\psi_i}\
-      =\sum_i q_i\Tr\Ket{\psi_i}\Bra{\psi_i}\
+      =\Tr\sum_i q_i\ket{\psi_i}\bra{\psi_i}\
+      =\sum_i q_i\Tr\ket{\psi_i}\bra{\psi_i}\
       =\sum_i q_i\
       =1$.
 
     - $\rho'^2\
-      =\sum_{i,j}q_iq_j\Ket{\psi_i}\Braket{\psi_i|\psi_j}\Bra{\psi_j}$
-      $=\sum_i q_i^2\Ket{\psi_i}\Braket{\psi_i|\psi_i}\Bra{\psi_i}+\sum_{i\ne j}q_iq_j\Ket{\psi_i}\Braket{\psi_i|\psi_j}\Bra{\psi_j}$.
+      =\sum_{i,j}q_iq_j\ket{\psi_i}\braket{\psi_i|\psi_j}\bra{\psi_j}$
+      $=\sum_i q_i^2\ket{\psi_i}\braket{\psi_i|\psi_i}\bra{\psi_i}+\sum_{i\ne j}q_iq_j\ket{\psi_i}\braket{\psi_i|\psi_j}\bra{\psi_j}$.
 
     - $\Tr\rho'^2\le\Tr\rho^2=1$ and equal only applies if there is only one term in $\rho'$.
 
@@ -78,12 +78,12 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
 
     - Example:
 
-      - $\rho'=\frac{1}{2}\Ket0\Bra0+\frac{1}{2}\Ket1\Bra1$.
+      - $\rho'=\frac{1}{2}\ket0\bra0+\frac{1}{2}\ket1\bra1$.
 
       - $\rho'^2\
-        =\frac{1}{4}(\Ket0\Braket{0|0}\Bra0+\Ket0\Braket{0|1}\Bra1+\Ket1\Braket{1|0}\Bra0+\Ket1\Braket{1|1}\Bra1)$
+        =\frac{1}{4}(\ket0\braket{0|0}\bra0+\ket0\braket{0|1}\bra1+\ket1\braket{1|0}\bra0+\ket1\braket{1|1}\bra1)$
 
-        $=\frac{1}{4}(\Ket0\Bra0+\Ket1\Bra1)=\frac{1}{4}I$.
+        $=\frac{1}{4}(\ket0\bra0+\ket1\bra1)=\frac{1}{4}I$.
 
       - $\Tr\rho'^2=\frac{1}{2}$.
 
@@ -92,7 +92,7 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
 ## [Density Matrix and Bloch Sphere Visualization](https://youtu.be/ZmU6vRFPHr8)
 
 - Recall:
-  $\rho=\Ket\psi\Bra\psi\
+  $\rho=\ket\psi\bra\psi\
   =\begin{bmatrix}\alpha_0\\\alpha_1\end{bmatrix}[\alpha_0^*~~\alpha_1^*]\
   =\begin{bmatrix}\alpha_0\alpha_0^*&\alpha_0\alpha_1^*\\\alpha_1\alpha_0^*&\alpha_1\alpha_1^*\end{bmatrix}\
   =\begin{bmatrix}\cos^2(\theta/2)&e^{-i\phi}\cos(\theta/2)\sin(\theta/2)\\e^{i\phi}\sin(\theta/2)\cos(\theta/2)&\sin^2(\theta/2)\end{bmatrix}$
@@ -149,13 +149,6 @@ Ref: [Quantum Physics with Konstantin Lakic](https://youtu.be/kqnMgQzjLmQ) Playl
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

@@ -10,13 +10,13 @@
     - $e^{-i\omega t}$ traversing to the right (e.g., at $kx=\pi/2$ the wave goes up initially)
 - Momentum
   - Momentum is negative gradient of wave function wrt to space: $\boxed{\mathbf p=-i\hbar\nabla}$
-  - $\mathbf p\Ket\psi=-i\hbar\nabla\Ket\psi=\vec p\Ket\psi$, where measurement $\vec p$ is an eigenvalue of operator $\mathbf p$.
-  - $\mathbf p\Ket\psi=-i\hbar\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\Ket\psi=-i\hbar\cdot ik\Ket\psi=p\Ket\psi$, where $k=\frac{2\pi}{\lambda}$.
+  - $\mathbf p\ket\psi=-i\hbar\nabla\ket\psi=\vec p\ket\psi$, where measurement $\vec p$ is an eigenvalue of operator $\mathbf p$.
+  - $\mathbf p\ket\psi=-i\hbar\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\ket\psi=-i\hbar\cdot ik\ket\psi=p\ket\psi$, where $k=\frac{2\pi}{\lambda}$.
   - $\displaystyle\boxed{p=\hbar k=\frac{h}{\lambda}}$ ... $p=\frac{h}{2\pi}\frac{2\pi}{\lambda}=\frac{h}{\lambda}$.
 - Energy
   - Energy is gradient of wave function wrt to time: $\displaystyle\boxed{\mathbf E=i\hbar\frac{\partial}{\partial t}}$
-  - $\mathbf E\Ket\psi=i\hbar\frac{\partial}{\partial t}\Ket\psi=E\Ket\psi$, where measurement $E$ is an eigenvalue of operator $\mathbf E$.
-  - $\mathbf E\Ket\psi=i\hbar\cdot(-i\omega)\Ket\psi=E\Ket\psi$, where $\omega=2\pi f$.
+  - $\mathbf E\ket\psi=i\hbar\frac{\partial}{\partial t}\ket\psi=E\ket\psi$, where measurement $E$ is an eigenvalue of operator $\mathbf E$.
+  - $\mathbf E\ket\psi=i\hbar\cdot(-i\omega)\ket\psi=E\ket\psi$, where $\omega=2\pi f$.
   - $\boxed{E=\hbar\omega=hf}$ ... $E=\frac{h}{2\pi}\cdot 2\pi f=hf$.
 - Simple harmonic motion (SHM)
   - $-\kappa y=m\ddot y$, where $\kappa$ is the spring constant and $y$ is the offset (i.e., distance from neutral)
@@ -170,14 +170,14 @@ Ref: https://www.youtube.com/playlist?list=PL54DF0652B30D99A4
     - $\phi=\frac{1}{2}\phi_R+\frac{1}{2}\phi_L=\frac{1}{2}e^{ikx}(e^{-i\omega t}+e^{i\omega t})=\cos(\omega t)e^{ikx}$.
   - In both cases $\phi=i\cos(kx)e^{i\omega t}$ and $\phi=\cos(\omega t)e^{ikx}$:
     - First case:
-      - $\mathbf p\Ket\phi=-i\hbar\nabla\Ket\phi=-i\hbar k\Ket\phi$.
+      - $\mathbf p\ket\phi=-i\hbar\nabla\ket\phi=-i\hbar k\ket\phi$.
       -
-    - $\mathbf p^2\Ket\phi=-\hbar^2\nabla^2\Ket\phi=\hbar^2k^2\Ket\phi$.
+    - $\mathbf p^2\ket\phi=-\hbar^2\nabla^2\ket\phi=\hbar^2k^2\ket\phi$.
     - ??
-      - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}\Ket\phi=i\hbar(i\omega)\Ket\phi=-\hbar\omega\Ket\phi$
+      - $\mathbf E\ket\phi=i\hbar\frac{\partial}{\partial t}\ket\phi=i\hbar(i\omega)\ket\phi=-\hbar\omega\ket\phi$
       - $=-i\hbar\omega\sin(\omega t)e^{ikx}$
-      - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}i\cos(kx)e^{i\omega t}=-i\hbar \omega\cos(kx)e^{i\omega t}=-i\hbar\omega(\cos(kx)\cos(\omega t)+i\cos(kx)\sin(\omega t))$
-      - $\mathbf E\Ket\phi=i\hbar\frac{\partial}{\partial t}\cos(\omega t)e^{ikx}=-i\hbar \omega\sin(\omega t)e^{ikx}=-i\hbar\omega(\cos(kx)\sin(\omega t)+i\sin(kx)\sin(\omega t))$
+      - $\mathbf E\ket\phi=i\hbar\frac{\partial}{\partial t}i\cos(kx)e^{i\omega t}=-i\hbar \omega\cos(kx)e^{i\omega t}=-i\hbar\omega(\cos(kx)\cos(\omega t)+i\cos(kx)\sin(\omega t))$
+      - $\mathbf E\ket\phi=i\hbar\frac{\partial}{\partial t}\cos(\omega t)e^{ikx}=-i\hbar \omega\sin(\omega t)e^{ikx}=-i\hbar\omega(\cos(kx)\sin(\omega t)+i\sin(kx)\sin(\omega t))$
       -
 
 
@@ -186,13 +186,6 @@ Ref: https://www.youtube.com/playlist?list=PL54DF0652B30D99A4
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

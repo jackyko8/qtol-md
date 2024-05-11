@@ -1,37 +1,37 @@
-# QC Sketch 2
+# Sketch
 
 - Bell state measurement
 
-  - $\Ket\psi=\Rsr2(\Ket{01}-\Ket{10})$
+  - $\ket\psi=\Rsr2(\ket{01}-\ket{10})$
 
-    - $H\Ket1=\Rsr2(\Ket0-\Ket1)$
-    - $Cx(0, 1)(H\Ket1\otimes\Ket1)=\Rsr2(\Ket{01}-\Ket{10})$
+    - $H\ket1=\Rsr2(\ket0-\ket1)$
+    - $Cx(0, 1)(H\ket1\otimes\ket1)=\Rsr2(\ket{01}-\ket{10})$
 
   - Measurement along $Z$
 
-    - $Z\otimes Z\Ket\psi=\begin{bmatrix}1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&1\end{bmatrix}\Rsr2\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=\Rsr2\begin{bmatrix}0\\-1\\1\\0\end{bmatrix}.$
-    - Expectation value: $\Bra\psi Z\otimes Z\Ket\psi=\frac{1}{2}[0~~1~-1~~0]\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=1.$
+    - $Z\otimes Z\ket\psi=\begin{bmatrix}1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&1\end{bmatrix}\Rsr2\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=\Rsr2\begin{bmatrix}0\\-1\\1\\0\end{bmatrix}.$
+    - Expectation value: $\bra\psi Z\otimes Z\ket\psi=\frac{1}{2}[0~~1~-1~~0]\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=1.$
 
   - Measurement along $H$
 
-    - $H\otimes H\Ket\psi=\frac{1}{2}\begin{bmatrix}1&1&1&1\\1&-1&1&-1\\1&1&-1&-1\\1&-1&-1&1\end{bmatrix}\Rsr2\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=\Rsr2\begin{bmatrix}0\\-1\\1\\0\end{bmatrix}$
+    - $H\otimes H\ket\psi=\frac{1}{2}\begin{bmatrix}1&1&1&1\\1&-1&1&-1\\1&1&-1&-1\\1&-1&-1&1\end{bmatrix}\Rsr2\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=\Rsr2\begin{bmatrix}0\\-1\\1\\0\end{bmatrix}$
 
-    - Expectation value: $\Bra\psi H\otimes H\Ket\psi=\frac{1}{2}[0~~1~-1~~0]\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=1$
+    - Expectation value: $\bra\psi H\otimes H\ket\psi=\frac{1}{2}[0~~1~-1~~0]\begin{bmatrix}0\\1\\-1\\0\end{bmatrix}=1$
 
 - Measurement basis
-  - The computational basis is $\{\Ket0, \Ket1\}$, which is a projection $\Braket{0|\psi}$.
+  - The computational basis is $\{\ket0, \ket1\}$, which is a projection $\braket{0|\psi}$.
   - The "observable" is the Hamiltonian with eigenvectors being the measurement basis.
-    - Let $\mathcal O$ be the observable and $\{\Ket{e_0}, \Ket{e_1}\}$ its measurement basis with eigenvalue $\lambda_0$ and $\lambda_1$ respectively.
-    - Any $\Ket\psi$ to be measured can be decomposed into $\Ket\psi=c_0\Ket{e_0}+c_1\Ket{e_1}.$
-    - $\mathcal O\Ket\psi=c_0\mathcal O\Ket{e_0}+c_1\mathcal O\Ket{e_1}=c_0\lambda_0\Ket{e_0}-c_1\lambda_1\Ket{e_1}.$
-      - When $\lambda_0=1$ and $\lambda_1=-1$, $\mathcal O\Ket\psi$ is a flip over basis $\Ket{e_0}$.
-    - $\Bra\psi=\alpha^*\Bra{e_0}+\beta^*\Bra{e_1}.$
-    - $\Bra\psi\mathcal O\Ket\psi=\alpha^*\alpha-\beta^*\beta$
+    - Let $\mathcal O$ be the observable and $\{\ket{e_0}, \ket{e_1}\}$ its measurement basis with eigenvalue $\lambda_0$ and $\lambda_1$ respectively.
+    - Any $\ket\psi$ to be measured can be decomposed into $\ket\psi=c_0\ket{e_0}+c_1\ket{e_1}.$
+    - $\mathcal O\ket\psi=c_0\mathcal O\ket{e_0}+c_1\mathcal O\ket{e_1}=c_0\lambda_0\ket{e_0}-c_1\lambda_1\ket{e_1}.$
+      - When $\lambda_0=1$ and $\lambda_1=-1$, $\mathcal O\ket\psi$ is a flip over basis $\ket{e_0}$.
+    - $\bra\psi=\alpha^*\bra{e_0}+\beta^*\bra{e_1}.$
+    - $\bra\psi\mathcal O\ket\psi=\alpha^*\alpha-\beta^*\beta$
   - Other (non-$Z$) measurement basis, such as $\
 
 ## Observable
 
-- To measure on $X$ is to transforming its eigenstates $\{\Ket+,\Ket-\}$ to $\{\Ket0,\Ket1\}$ respectively with $H$, then measure on $Z$.
+- To measure on $X$ is to transforming its eigenstates $\{\ket+,\ket-\}$ to $\{\ket0,\ket1\}$ respectively with $H$, then measure on $Z$.
 - Generally, measuring on $\alpha$ is to transform its eigenstates to $Z$'s
   - $X$: $H=\Rsr2\begin{bmatrix}1&1\\1&-1\end{bmatrix}$
   - $Y$: $HS^\dagger=\Rsr2\begin{bmatrix}1&-i\\1&i\end{bmatrix}$
@@ -45,10 +45,10 @@ Echoed Cross-Resonance
 
 - $ECR=\Rsr2\begin{bmatrix}0&1&0&i\\1&0&-i&0\\0&i&0&1\\-i&0&1&0\end{bmatrix}$
   - $ECR^2=I$
-  - $ECR\Ket{00}=\Rsr2(\Ket{0}-i\Ket{1})\Ket1$
-  - $ECR\Ket{01}=\Rsr2(\Ket{0}+i\Ket{1})\Ket0$
-  - $ECR\Ket{10}=\Rsr2(\Ket{0}-i\Ket{1})\Ket1$
-  - $ECR\Ket{11}=\Rsr2(\Ket{0}+i\Ket{1})\Ket0$
+  - $ECR\ket{00}=\Rsr2(\ket{0}-i\ket{1})\ket1$
+  - $ECR\ket{01}=\Rsr2(\ket{0}+i\ket{1})\ket0$
+  - $ECR\ket{10}=\Rsr2(\ket{0}-i\ket{1})\ket1$
+  - $ECR\ket{11}=\Rsr2(\ket{0}+i\ket{1})\ket0$
 
 
 
@@ -63,13 +63,13 @@ Example: $\mathcal M_X:X\mapsto Z$, then $\mathcal M_X=ZX$
 ## Basics
 
 - Entanglement
-  - Bell state: $\Ket\Psi=\Rsr2(\Ket{00}+\Ket{11})=\Rsr2\begin{bmatrix}1\\0\\0\\1\end{bmatrix}$.
+  - Bell state: $\ket\Psi=\Rsr2(\ket{00}+\ket{11})=\Rsr2\begin{bmatrix}1\\0\\0\\1\end{bmatrix}$.
   - $B=C_x(H\otimes I)=\Rsr2\begin{bmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}=\Rsr2\begin{bmatrix}1&0&1&0\\0&1&0&1\\0&1&0&-1\\1&0&-1&0\end{bmatrix}$.
     - The columns represent the four Bell states.
-    - $B\Ket{00}=\Ket\Psi$.
+    - $B\ket{00}=\ket\Psi$.
   - $B^\dagger=\Rsr2\begin{bmatrix}1&0&0&1\\0&1&1&0\\1&0&0&-1\\0&1&-1&0\end{bmatrix}$.
-    - $\Bra{00}B^\dagger=\Rsr2\begin{bmatrix}1&0&0&1\end{bmatrix}$
-  - $\Ket\Psi\Bra\Psi=B\Ket{00}\Bra{00}B^\dagger=\frac{1}{2}\begin{bmatrix}1&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&1\end{bmatrix}$.
+    - $\bra{00}B^\dagger=\Rsr2\begin{bmatrix}1&0&0&1\end{bmatrix}$
+  - $\ket\Psi\bra\Psi=B\ket{00}\bra{00}B^\dagger=\frac{1}{2}\begin{bmatrix}1&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&1\end{bmatrix}$.
   - ?? $\Rsr2\begin{bmatrix}1&0&1&0\\0&1&0&1\\1&0&-1&0\\0&1&0&-1\end{bmatrix}\begin{bmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{bmatrix}=\Rsr2\begin{bmatrix}1&0&0&1\\0&1&1&0\\1&0&0&-1\\0&1&-1&0\end{bmatrix}$.
 
 ## Inspiration
@@ -104,13 +104,6 @@ Example: $\mathcal M_X:X\mapsto Z$, then $\mathcal M_X=ZX$
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

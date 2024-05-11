@@ -27,23 +27,16 @@ Here we use $E$ to mean an expression.
   - Trace
     - $\Tr A=A^i_{~i}$​.
 - Braket
-  - $\Ket\psi=\psi^i$.
-  - $\Bra\psi=\psi_i$ .
-  - $\Braket{\psi|\phi}=\psi_j\phi^i$.
-  - ??If $M=\Ket\phi\Bra\psi$, then $M^i_{~j}=\phi_i\psi_j$.
+  - $\ket\psi=\psi^i$.
+  - $\bra\psi=\psi_i$ .
+  - $\braket{\psi|\phi}=\psi_j\phi^i$.
+  - ??If $M=\ket\phi\bra\psi$, then $M^i_{~j}=\phi_i\psi_j$.
 
 ---
 
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

@@ -34,24 +34,24 @@
   - Each of $\hat X_a\hat X_b$ and $\hat Z_a\hat Z_b$ has four eigenstates:
     - $\hat X_a\hat X_b=\begin{bmatrix}0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0\end{bmatrix}$.
       - Four eigenstates: $\frac{1}{2}\begin{bmatrix}1\\1\\1\\1\end{bmatrix},-\frac{1}{2}\begin{bmatrix}1\\-1\\1\\-1\end{bmatrix},-\frac{1}{2}\begin{bmatrix}1\\1\\-1\\-1\end{bmatrix},\frac{1}{2}\begin{bmatrix}1\\-1\\-1\\1\end{bmatrix}$.
-      - Or: $\frac{1}{2}\Ket{++},-\frac{1}{2}\Ket{+-},-\frac{1}{2}\Ket{-+},\frac{1}{2}\Ket{--}$.
-      - For eigenvalue $+1$, $\Ket{++}$ and $\Ket{--}$ forms a 2D eigenspace, containing $\Rsr2(\Ket{00}+\Ket{11})$ and $\Rsr2(\Ket{01}+\Ket{10})$.
-      - For eigenvalue $-1$, $\Ket{+-}$ and $\Ket{-+}$ forms a 2D eigenspace, containing $\Rsr2(\Ket{00}-\Ket{11})$ and $\Rsr2(\Ket{01}-\Ket{10})$.
+      - Or: $\frac{1}{2}\ket{++},-\frac{1}{2}\ket{+-},-\frac{1}{2}\ket{-+},\frac{1}{2}\ket{--}$.
+      - For eigenvalue $+1$, $\ket{++}$ and $\ket{--}$ forms a 2D eigenspace, containing $\Rsr2(\ket{00}+\ket{11})$ and $\Rsr2(\ket{01}+\ket{10})$.
+      - For eigenvalue $-1$, $\ket{+-}$ and $\ket{-+}$ forms a 2D eigenspace, containing $\Rsr2(\ket{00}-\ket{11})$ and $\Rsr2(\ket{01}-\ket{10})$.
 
     - $\hat Z_a\hat Z_b=\begin{bmatrix}1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&1\end{bmatrix}$.
       - Four eigenstates: $\begin{bmatrix}1\\0\\0\\0\end{bmatrix},-\begin{bmatrix}0\\1\\0\\0\end{bmatrix},-\begin{bmatrix}0\\0\\1\\0\end{bmatrix},\begin{bmatrix}0\\0\\0\\1\end{bmatrix}$.
-      - Or: $\Ket{00},-\Ket{01},-\Ket{10},\Ket{11}$.
-      - For eigenvalue $+1$, $\Ket{00}$ and $\Ket{11}$ forms a 2D eigenspace, containing $\Rsr2(\Ket{00}\pm\Ket{11})$.
-      - For eigenvalue $-1$, $\Ket{01}$ and $\Ket{10}$ forms a 2D eigenspace, containing $\Rsr2(\Ket{01}\pm\Ket{10})$.
+      - Or: $\ket{00},-\ket{01},-\ket{10},\ket{11}$.
+      - For eigenvalue $+1$, $\ket{00}$ and $\ket{11}$ forms a 2D eigenspace, containing $\Rsr2(\ket{00}\pm\ket{11})$.
+      - For eigenvalue $-1$, $\ket{01}$ and $\ket{10}$ forms a 2D eigenspace, containing $\Rsr2(\ket{01}\pm\ket{10})$.
 
     - Four simultaneous eigenvectors
 
       | $\hat Z_a\hat Z_b$ eigenvalue | $\hat X_a\hat X_b$ eigenvalue | Simultaneous eigenstate    |
       | ----------------------------- | ----------------------------- | -------------------------- |
-      | $+1$                          | $+1$                          | $\Rsr2(\Ket{00}+\Ket{11})$ |
-      | $+1$                          | $-1$                          | $\Rsr2(\Ket{00}-\Ket{11})$ |
-      | $-1$                          | $+1$                          | $\Rsr2(\Ket{01}+\Ket{10})$ |
-      | $-1$                          | $-1$                          | $\Rsr2(\Ket{01}-\Ket{10})$ |
+      | $+1$                          | $+1$                          | $\Rsr2(\ket{00}+\ket{11})$ |
+      | $+1$                          | $-1$                          | $\Rsr2(\ket{00}-\ket{11})$ |
+      | $-1$                          | $+1$                          | $\Rsr2(\ket{01}+\ket{10})$ |
+      | $-1$                          | $-1$                          | $\Rsr2(\ket{01}-\ket{10})$ |
 
     - These four states can be measured repeatedly by $\hat X_a\hat X_b\hat Z_a\hat Z_b$ or $\hat Z_a\hat Z_b\hat X_a\hat X_b$ without collapsing on other observables.
 
@@ -63,17 +63,17 @@
 
     | Stabliser eigenvalue | Simultaneous eigenstates (Bell states)   |
     | -------------------- | ---------------------------------------- |
-    | $+1$                 | $\Ket{\beta_0}=\Rsr2(\Ket{00}+\Ket{11})$ |
-    | $-1$                 | $\Ket{\beta_1}=\Rsr2(\Ket{00}-\Ket{11})$ |
-    | $-1$                 | $\Ket{\beta_2}=\Rsr2(\Ket{01}+\Ket{10})$ |
-    | $+1$                 | $\Ket{\beta_3}=\Rsr2(\Ket{01}-\Ket{10})$ |
+    | $+1$                 | $\ket{\beta_0}=\Rsr2(\ket{00}+\ket{11})$ |
+    | $-1$                 | $\ket{\beta_1}=\Rsr2(\ket{00}-\ket{11})$ |
+    | $-1$                 | $\ket{\beta_2}=\Rsr2(\ket{01}+\ket{10})$ |
+    | $+1$                 | $\ket{\beta_3}=\Rsr2(\ket{01}-\ket{10})$ |
 
   - Error on a single qubit:
 
     | Error                    | Transformation                                               |
     | ------------------------ | ------------------------------------------------------------ |
-    | $\hat X_a$ or $\hat X_b$ | $\Ket{\beta_0}\leftrightarrow\Ket{\beta_2}$, $\Ket{\beta_1}\leftrightarrow\Ket{\beta_3}$ |
-    | $\hat Z_a$ or $\hat Z_b$ | $\Ket{\beta_0}\leftrightarrow\Ket{\beta_1}$, $\Ket{\beta_2}\leftrightarrow\Ket{\beta_3}$ |
+    | $\hat X_a$ or $\hat X_b$ | $\ket{\beta_0}\leftrightarrow\ket{\beta_2}$, $\ket{\beta_1}\leftrightarrow\ket{\beta_3}$ |
+    | $\hat Z_a$ or $\hat Z_b$ | $\ket{\beta_0}\leftrightarrow\ket{\beta_1}$, $\ket{\beta_2}\leftrightarrow\ket{\beta_3}$ |
 
   - In both cases, the sign of the stabiliser eigenvalue has changed, but we cannot tell which error occurred.
 
@@ -111,13 +111,6 @@
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

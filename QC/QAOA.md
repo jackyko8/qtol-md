@@ -6,7 +6,7 @@
 
   - [Hamiltonian](./Hamiltonia.md)
 
-- Hamiltonian $H$ is a Hermitian operator with real eigenvalues and therefore used in measurements: $\Braket{\psi|H|\psi}$.
+- Hamiltonian $H$ is a Hermitian operator with real eigenvalues and therefore used in measurements: $\braket{\psi|H|\psi}$.
 
 - A unitary is used to implement quantum gates by evolving $U(H,t)=e^{-iHt/\hbar}$ with an engineered $H$ and precision timing.
 
@@ -65,17 +65,17 @@
 
 - QAOA
 
-  - Ansatz state - a parameterised "guess" as an initial state $\Ket s=\Ket{-,-,\ldots}$ in this example.
+  - Ansatz state - a parameterised "guess" as an initial state $\ket s=\ket{-,-,\ldots}$ in this example.
   - Parameter: $(\vec\beta,\vec\gamma)$, where
     - $\beta=(\beta_1,\beta_2,\ldots,\beta_p)$ and $\gamma=(\gamma_1,\gamma_2,\ldots,\gamma_p)$ for $p$ steps
     - $\beta_j\in(0,\pi)$ and $\gamma_j\in(0,2\pi)$
   - Recall: $U(H,t)=e^{-iHt/\hbar}$, which can be reinterpreted as $U_h(\theta)=e^{-i\theta\sigma^h}$.
   - For each vertex $j$, we use $U_{x_j}(\beta)=e^{-i\beta\sigma_j^x}$, and therefore the Hamiltonian is $U_x(\beta)=\prod_jU_{x_j}(\beta)=e^{-i\beta\sum_j\sigma_j^x}$.
   - For each edge $j,k$, we use $U_{zz_{j,k}}(\gamma)=e^{-i\gamma\sigma_j^z\sigma_k^z}$, and therefore the Hamiltonian is $U_{zz}(\gamma)=\prod_{j>k}U_{zz_{j,k}}(\gamma)=e^{-i\gamma\sum_{i>j}\sigma_j^z\sigma_k^z}=e^{-i\gamma H_C}$
-  - Parameterised state at depth $p$: $\Ket{\gamma_p,\beta_p}=U_x(\beta_p)U_{zz}(\gamma_p)\ldots U_x(\beta_1)U_{zz}(\gamma_1)\Ket s$
+  - Parameterised state at depth $p$: $\ket{\gamma_p,\beta_p}=U_x(\beta_p)U_{zz}(\gamma_p)\ldots U_x(\beta_1)U_{zz}(\gamma_1)\ket s$
   - From the measurement probability distribution, the value of the cost function $H_C$ can be evaluated (classically)
-    - Expectation value: $E(\gamma,\beta)=\Braket{H_C}$.
-  - The bitstring of the most probable measurement in depth $p$ with minimum $\Braket{H_C}$ is the QAOA solution.
+    - Expectation value: $E(\gamma,\beta)=\braket{H_C}$.
+  - The bitstring of the most probable measurement in depth $p$ with minimum $\braket{H_C}$ is the QAOA solution.
 
 - Pseudo code
 
@@ -90,14 +90,14 @@
       - For each non-zero in `ising` rotate with `ZZgate(j, k, gamma)` by $\theta$.
       - As $J_{i,j}\in[0,1],J_{i,j}\gamma=\theta/2$, hence $\theta=2J_{i,j}\gamma$.
     - `circuit(params, device, n_qubits, ising)`
-      - Generate circuit $U(\gamma,\beta)=U_x(\beta_p)U_{zz}(\gamma_p)\ldots U_x(\beta_1)U_{zz}(\gamma_1)$, such that $\Ket{\gamma_p,\beta_p}=U(\gamma,\beta)\Ket s$
-      - Set up $\Ket s$ to be $\Ket-\ldots$
+      - Generate circuit $U(\gamma,\beta)=U_x(\beta_p)U_{zz}(\gamma_p)\ldots U_x(\beta_1)U_{zz}(\gamma_1)$, such that $\ket{\gamma_p,\beta_p}=U(\gamma,\beta)\ket s$
+      - Set up $\ket s$ to be $\ket-\ldots$
       - Call `cost_circuit()` and `driver()` for all `gammas` and `betas` extracted from `params` to add to the circuit
     - `objective_functions(params, device, ising, n_qubits, n_shots, tracker, verbose)`
       - Return the expectation value $E(\gamma,\beta)$
       - Run the QAOA `circuit()`
       - Map all result bitstrings $z$ 0 to -1
-      - Energies of all bitstrings in the result: $\Braket{H_C}_z=\Braket{z|J|z}$ where $m$ is the result and $J$ is the ising
+      - Energies of all bitstrings in the result: $\braket{H_C}_z=\braket{z|J|z}$ where $m$ is the result and $J$ is the ising
       - Track the minimum energy and its bitstring $z$
       - Return expectation value: average of all energies
     - `train(device, options, p, ising, n_qubits, n_shots, opt_method, tracker, verbose)`
@@ -113,13 +113,6 @@
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

@@ -148,33 +148,33 @@ In order to continue the discussion, we need to add the following axiomatic prop
 Following the previous discussion of $V$ and $F$.
 
 - Axioms
-  - Inner product: $\Braket{v|w}:V\rightarrow F$
-    - $\Braket{u|\alpha w}=\alpha\Braket{u|w}$.
-    - $\Braket{u|v+w}=\Braket{u|v}+\Braket{u|w}$.
-  - Norm of vector: $\lVert v\rVert^2\equiv\Braket{v|v}(\in F)$.
+  - Inner product: $\braket{v|w}:V\rightarrow F$
+    - $\braket{u|\alpha w}=\alpha\braket{u|w}$.
+    - $\braket{u|v+w}=\braket{u|v}+\braket{u|w}$.
+  - Norm of vector: $\lVert v\rVert^2\equiv\braket{v|v}(\in F)$.
   - ??Norm of scalar: ...
   - ??Conjugate (of scalar): $\forall\alpha\in F,\exists\beta\in F:\alpha\beta=|\alpha|^2$.
     - $\alpha^*$ represents the conjugate of $\alpha$.
     - Example: In $(\mathbb C,\times),\alpha=a+ib,\beta=a-ib,\alpha\beta=a^2+b^2=|\alpha|^2$, where $a,b\in\mathbb R$.
-  - Conjugate symmetry: $\Braket{v|w}=\Braket{w|v}^*$.
+  - Conjugate symmetry: $\braket{v|w}=\braket{w|v}^*$.
     - Note: "Real" means $\alpha^*=\alpha$.
-    - $\Braket{v|v}=\Braket{v|v}$ so it is "real" and so is $|v|=\sqrt{\Braket{v|v}}$.
+    - $\braket{v|v}=\braket{v|v}$ so it is "real" and so is $|v|=\sqrt{\braket{v|v}}$.
   - ??Positive-definiteness:
-    - $\Braket{v|\mathbf0}=\Braket{\mathbf0|v}=0$.
+    - $\braket{v|\mathbf0}=\braket{\mathbf0|v}=0$.
     - For $v\ne\mathbf0$.
-      - $\Braket{v|v}\gt0$ (as a definition of larger than)
-      - The additive inverse $-\Braket{v|v}\lt0$ (as a definition of smaller than)
+      - $\braket{v|v}\gt0$ (as a definition of larger than)
+      - The additive inverse $-\braket{v|v}\lt0$ (as a definition of smaller than)
 - Consequences
-  - $\Braket{\alpha u|w}=\alpha^*\Braket{u|w}$.
-    - $\Braket{\alpha u|w}=\Braket{w|\alpha u}^*=(\alpha\Braket{w|u})^*$.
+  - $\braket{\alpha u|w}=\alpha^*\braket{u|w}$.
+    - $\braket{\alpha u|w}=\braket{w|\alpha u}^*=(\alpha\braket{w|u})^*$.
   - $(\alpha\beta)^*=\alpha^*\beta^*$.
     - ...
   - Linearity:
-    - Left: $\Braket{u|\alpha v+\beta w}=\alpha\Braket{u|v}+\beta\Braket{u|w}$.
-    - Right: $\Braket{\alpha v+\beta w|u}=\alpha^*\Braket{v|u}+\beta^*\Braket{w|u}$
+    - Left: $\braket{u|\alpha v+\beta w}=\alpha\braket{u|v}+\beta\braket{u|w}$.
+    - Right: $\braket{\alpha v+\beta w|u}=\alpha^*\braket{v|u}+\beta^*\braket{w|u}$
   - $(\alpha^*)^*=\alpha$.
-    - $\alpha\Braket{u|w}=\Braket{u|\alpha w}=\Braket{\alpha w|u}^*=(\alpha^*\Braket{w|u})^*=(\alpha^*)^*\Braket{u|w}$.
-    - ??Multiply $(\Braket{u|w})^{-1}$ on both sides.
+    - $\alpha\braket{u|w}=\braket{u|\alpha w}=\braket{\alpha w|u}^*=(\alpha^*\braket{w|u})^*=(\alpha^*)^*\braket{u|w}$.
+    - ??Multiply $(\braket{u|w})^{-1}$ on both sides.
 
 
 ---
@@ -182,13 +182,6 @@ Following the previous discussion of $V$ and $F$.
 LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$

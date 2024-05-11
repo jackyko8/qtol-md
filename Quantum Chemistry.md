@@ -5,13 +5,13 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
 - Mathematics background
 
   - Ladder operators - raising or lowering operator to increase or decrease the eigenvalue of another operator
-    - Eigenvalue: $N\Ket n=n\Ket n$.
+    - Eigenvalue: $N\ket n=n\ket n$.
     - Commutation relation: $[N,X]=cX$​.   i.e., $NX-XN=cX$​.
-      - $NX\Ket n=(XN+cX)\Ket n=Xn\Ket n+cX\Ket n=(n+c)X\Ket n$.
-      - i.e., $X\Ket n$ is an eigenstate of $N$ with eigenvalue $n+c$.
+      - $NX\ket n=(XN+cX)\ket n=Xn\ket n+cX\ket n=(n+c)X\ket n$.
+      - i.e., $X\ket n$ is an eigenstate of $N$ with eigenvalue $n+c$.
     - If $N$ is Hermitian, $c$ must be real. $[N,X^\dagger]=[N^\dagger,X^\dagger]=N^\dagger X^\dagger-X^\dagger N^\dagger=(XN-NX)^\dagger=-c^*X^\dagger=-cX^\dagger$.
-      - $NX^\dagger\Ket n=(X^\dagger N-cX^\dagger)\Ket n=X^\dagger n\Ket n-cX^\dagger\Ket n=(n-c)X^\dagger\Ket n$.
-      - i.e., $X^\dagger\Ket n$ is an eigenstate of $N$ with eigenvalue $n-c$.
+      - $NX^\dagger\ket n=(X^\dagger N-cX^\dagger)\ket n=X^\dagger n\ket n-cX^\dagger\ket n=(n-c)X^\dagger\ket n$.
+      - i.e., $X^\dagger\ket n$ is an eigenstate of $N$ with eigenvalue $n-c$.
   - [Hartree product](https://en.wikipedia.org/wiki/Hartree_equation)
     - $\Psi_h(\mathbf x_1,\ldots,\mathbf x_p)=\psi_\alpha(\mathbf x_1)\ldots\psi_\pi(\mathbf x_p)$.
     - Not anti-symmetric so not satisfying Pauli exclusion principle.
@@ -37,9 +37,9 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     - The ground state, minimum energy of the system, is $E_0=\frac{\hbar\omega}{2}=\frac{\Delta E}{2}$.
       - The fact that minimum energy is not zero is related to the [Heisenberg uncertainty principle](https://en.wikipedia.org/wiki/Heisenberg_uncertainty_principle).
     - The system with frequency $\nu=\frac{\omega}{2\pi}$ can only absorb a photon of $h\nu$ to raise its energy by $\Delta E=h\nu$ to the next energy level.
-    - The Hamiltonian $H$ measures the energy and gives $\Braket{\psi|H|\psi}$.
-      - If $\psi$ is in a superposition, $\Braket{\psi|H|\psi}$ measures the expectation value.
-    - The ground state wavefunction $\psi_0$ will measure an energy $\Braket{\psi_0|H|\psi_0}=\frac{\hbar\omega}{2}$.
+    - The Hamiltonian $H$ measures the energy and gives $\braket{\psi|H|\psi}$.
+      - If $\psi$ is in a superposition, $\braket{\psi|H|\psi}$ measures the expectation value.
+    - The ground state wavefunction $\psi_0$ will measure an energy $\braket{\psi_0|H|\psi_0}=\frac{\hbar\omega}{2}$.
     - $H$ can be derived from the molecular structure, the mass and position of all its constituents.
     - Creation operator $a^\dagger$ to raise the energy by one level, and annihilation operator $a$ to lower the energy by one level.
   - Molecule configuration
@@ -71,7 +71,7 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     - $\Psi(\mathbf x_1,\mathbf x_2)=-\Psi(\mathbf x_2,\mathbf x_1)$. It is anti-symmetry and therefore follows Pauli exclusion principle, ?which means the two are distinguishable.
     - This can be extended to more than 2 fermions: $\Psi(\ldots,\mathbf x_{p_1},\ldots,\mathbf x_{p_2}\ldots)=-\Psi(\ldots,\mathbf x_{p_2},\ldots,\mathbf x_{p_1}\ldots)$.
     - If both $\Psi$ are equal after the exchange of $x_{p_1}$ and $x_{p_2}$ (i.e., with no minus sign), both sides must be zero, which validate Pauli exclusion principle.
-    - Slate determinant represented in Fork space, by an occupation number vector $\Ket f=\Ket{f_{M-1},\ldots,f_0}$, where $f_i$ is 1 or 0 for occupied or not.
+    - Slate determinant represented in Fork space, by an occupation number vector $\ket f=\ket{f_{M-1},\ldots,f_0}$, where $f_i$ is 1 or 0 for occupied or not.
     - Not all fermionic wave functions can be written as a single Slater determinant.
 - Fermion [creation and annihilation operators](https://en.wikipedia.org/wiki/Creation_and_annihilation_operators) $a_p^\dagger$ and $a_p$ on electron $p$
 
@@ -174,18 +174,18 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
         =\Rsr n(N+1)\psi_{n-1}=\Rsr n(n-1+1)\psi_{n-1}=\sqrt n\cdot\psi_{n-1}$​.
     - This general solution can be found at [Quantum harmonic oscillator](https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator).
     - [Matrix representation](https://en.wikipedia.org/wiki/Creation_and_annihilation_operators#Matrix_representation) of $a^\dagger$ and $a$.
-      - $\Braket{\psi_p|\psi_q}=\int_{-\infty}^\infty\psi_p^*\psi_q~dr
+      - $\braket{\psi_p|\psi_q}=\int_{-\infty}^\infty\psi_p^*\psi_q~dr
         =\frac{1}{2^nn!}\int_{-\infty}^\infty H_pH_q\psi_0^*\psi_0~dr=\ldots$.
 - Implementation
 
   - Recall the Hamiltonian: $\displaystyle H=-\sum_i\frac{\nabla_i^2}{2}-\sum_{i,I}\frac{Z_I}{|\mathbf r_i-\mathbf R_I|}+\frac{1}{2}\sum_{i\ne j}\frac{1}{|\mathbf r_i-\mathbf r_j|}$.
   - We convert it to: $H=\sum_{p,q}h_{pq}a_p^\dagger a_q+\frac{1}{2}\sum_{p,q,r,s}h_{pqrs}a_p^\dagger a_q^\dagger a_ra_s$.
-    - $h_{pq}=\Braket{\phi_p|-\frac{\nabla^2}{2}-\sum_I\frac{Z_I}{|r-R_I|}|\phi_q}$.
-    - $h_{pqrs}=\Braket{\phi_p\phi_q|\frac{1}{|r_1-r_2|}|\phi_s\phi_r}$.
+    - $h_{pq}=\braket{\phi_p|-\frac{\nabla^2}{2}-\sum_I\frac{Z_I}{|r-R_I|}|\phi_q}$.
+    - $h_{pqrs}=\braket{\phi_p\phi_q|\frac{1}{|r_1-r_2|}|\phi_s\phi_r}$.
   - [Hartree-Fock method](https://en.wikipedia.org/wiki/Hartree%E2%80%93Fock_method)
 - Jordan-Wigner encoding
 
-  - Let $q_i=\Ket1$ represent orbital $i$ being occupied and $q_i=\Ket0$ being not.
+  - Let $q_i=\ket1$ represent orbital $i$ being occupied and $q_i=\ket0$ being not.
   -
 - WORKING
 
@@ -212,7 +212,7 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     -
 - WORKING
 
-  - ??Two electrons are represented by $a_p=\Ket{a_{p_{M-1}},\ldots,a_{p_0}}$ and $a_q=\Ket{a_{q_{M-1}},\ldots,a_{q_0}}$.
+  - ??Two electrons are represented by $a_p=\ket{a_{p_{M-1}},\ldots,a_{p_0}}$ and $a_q=\ket{a_{q_{M-1}},\ldots,a_{q_0}}$.
   - Fermion annihilation and creation operators: $\{a_p,a_p^\dagger\}$, corresponding to $\{\phi_p(\mathbf x_i)\}$.
 
     - $\{a_p,a_q\}=\{a_p^\dagger,a_q^\dagger\}=0$, and $\{a_p,a_q^\dagger\}=\delta_{pq}$.
@@ -223,22 +223,12 @@ This is my grain-of-salt interpretation of quantum chemistry, in preparation of 
     - $\displaystyle h_{pqrs}=\int d\mathbf x_1~d\mathbf x_2\frac{\phi_p^*(\mathbf x_1)\phi_q^*(\mathbf x_2)\phi_r(\mathbf x_1)\phi_s(\mathbf x_2)}{|\mathbf r_1-\mathbf r_2|}$.
 
 
-
-
 ---
 
-
-## jko
+LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$
 

@@ -124,7 +124,7 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
     - The energy of the system may remain a constant
 
   - Define an observable, the *Hamiltonian* operator, $\hat H\equiv-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial{x^2}}+V(x,t)$
-  - $\displaystyle i\hbar\frac{\partial}{\partial t}\Ket{\Psi(t)}=\hat H\Ket{\Psi(t)}=E\Ket{\Psi(t)}$.
+  - $\displaystyle i\hbar\frac{\partial}{\partial t}\ket{\Psi(t)}=\hat H\ket{\Psi(t)}=E\ket{\Psi(t)}$.
     - $i\hbar\dot\psi=H\psi$ on Schrödinger's gravestone (the simplest form possible)
 
 - Time-independent Hamiltonian
@@ -132,31 +132,31 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
   - The observable $\hat H$ corresponds to energy, so its eigenvalues are energies observed (as a spectrum of probabilities).
     - A different Hamiltonian may measure a different spectrum with different probability distribution.
 
-  - $\hat H\Ket\Psi=E\Ket\Psi$.
+  - $\hat H\ket\Psi=E\ket\Psi$.
     - $E$ is energy (scalar).
-  - ??The expectation value of $E$ is $\Bra\Psi\hat H\Ket\Psi$ or $\Bra\Psi i\hbar\frac{\partial}{\partial t}\Ket\Psi$.
+  - ??The expectation value of $E$ is $\bra\Psi\hat H\ket\Psi$ or $\bra\Psi i\hbar\frac{\partial}{\partial t}\ket\Psi$.
 
 - Unitary for time-independent $\hat H$
   - $\hat H$ is Hermitian, $\hat H^\dagger=\hat H$, not necessarily unitary but $e^{-i(t'-t)H}$ is. Let's see how.
 
-  - Verify that $\Ket{\Psi(t)}=e^{-i\mathbf{H}t}\Ket{\Psi(0)}$ satisfies the Schrödinger equation, where $\mathbf{H}=\hat H/\hbar$.
+  - Verify that $\ket{\Psi(t)}=e^{-i\mathbf{H}t}\ket{\Psi(0)}$ satisfies the Schrödinger equation, where $\mathbf{H}=\hat H/\hbar$.
 
     - For an infinitesimal time period $dt$,
-    - $\Ket{\Psi(t+dt)}
-      =e^{-i\mathbf{H}(t+dt)}\Ket{\Psi(0)}
-      =e^{-i\mathbf{H}dt}e^{-i\mathbf{H}t}\Ket{\Psi(0)}
-      =e^{-i\mathbf{H}dt}\Ket{\Psi(t)}$
-    - $\Ket{\Psi(t+dt)}-\Ket{\Psi(t)}=(e^{-i\mathbf{H}dt}-1)\Ket{\Psi(t)}=\frac{1}{e^{-i\mathbf Ht}}(e^{-i\mathbf{H}(t+dt)}-e^{-i\mathbf Ht})\Ket{\Psi(t)}$,
-    - $\frac{\Ket{\Psi(t+dt)}-\Ket{\Psi(t)}}{dt}=\frac{1}{e^{-i\mathbf Ht}}\frac{e^{-i\mathbf{H}(t+dt)}-e^{-i\mathbf{H}t}}{dt}\Ket{\Psi(t)}$,
-    - $\frac{\partial}{\partial t}\Ket{\Psi(t)}=\frac{1}{e^{-i\mathbf Ht}}\left(\frac{\partial}{\partial t}e^{-i\mathbf Ht}\right)\Ket{\Psi(t)}=-i\mathbf H\Ket{\Psi(t)}=-\frac{i}{\hbar}\hat H\Ket{\Psi(t)}$.
-    - $\displaystyle i\hbar\frac{\partial}{\partial t}\Ket{\Psi(t)}=\hat H\Ket{\Psi(t)}~\ldots~$Q.E.D.
+    - $\ket{\Psi(t+dt)}
+      =e^{-i\mathbf{H}(t+dt)}\ket{\Psi(0)}
+      =e^{-i\mathbf{H}dt}e^{-i\mathbf{H}t}\ket{\Psi(0)}
+      =e^{-i\mathbf{H}dt}\ket{\Psi(t)}$
+    - $\ket{\Psi(t+dt)}-\ket{\Psi(t)}=(e^{-i\mathbf{H}dt}-1)\ket{\Psi(t)}=\frac{1}{e^{-i\mathbf Ht}}(e^{-i\mathbf{H}(t+dt)}-e^{-i\mathbf Ht})\ket{\Psi(t)}$,
+    - $\frac{\ket{\Psi(t+dt)}-\ket{\Psi(t)}}{dt}=\frac{1}{e^{-i\mathbf Ht}}\frac{e^{-i\mathbf{H}(t+dt)}-e^{-i\mathbf{H}t}}{dt}\ket{\Psi(t)}$,
+    - $\frac{\partial}{\partial t}\ket{\Psi(t)}=\frac{1}{e^{-i\mathbf Ht}}\left(\frac{\partial}{\partial t}e^{-i\mathbf Ht}\right)\ket{\Psi(t)}=-i\mathbf H\ket{\Psi(t)}=-\frac{i}{\hbar}\hat H\ket{\Psi(t)}$.
+    - $\displaystyle i\hbar\frac{\partial}{\partial t}\ket{\Psi(t)}=\hat H\ket{\Psi(t)}~\ldots~$Q.E.D.
 
   - The infinitestimal interval $dt$ can be generalised to an arbitrary interval $\Delta t$.
 
-    - $\Ket{\Psi(t+\Delta t}=U\Ket{\Psi(t)}$, where $U=U(\Delta t)=e^{-i\frac{\hat H}{\hbar}\Delta t}$ .
-    - $\Ket{\Psi(t+n\Delta t}=U^n\Ket{\Psi(t)}=\left(e^{-i\frac{\hat H}{\hbar}\Delta t}\right)^n\Ket{\Psi(t)}=e^{-i\frac{\hat H}{\hbar}n\Delta t}\Ket{\Psi(t)}$ .
+    - $\ket{\Psi(t+\Delta t}=U\ket{\Psi(t)}$, where $U=U(\Delta t)=e^{-i\frac{\hat H}{\hbar}\Delta t}$ .
+    - $\ket{\Psi(t+n\Delta t}=U^n\ket{\Psi(t)}=\left(e^{-i\frac{\hat H}{\hbar}\Delta t}\right)^n\ket{\Psi(t)}=e^{-i\frac{\hat H}{\hbar}n\Delta t}\ket{\Psi(t)}$ .
 
-  - Time-independent evolution: $\boxed{\Ket{\Psi(t')}=e^{-i\frac{\hat H}{\hbar}(t'-t)}\Ket{\Psi(t)}}$.
+  - Time-independent evolution: $\boxed{\ket{\Psi(t')}=e^{-i\frac{\hat H}{\hbar}(t'-t)}\ket{\Psi(t)}}$.
 
   - Phase factor
 
@@ -166,7 +166,7 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
 
   - In the infinitestimal interval $dt$, $\hat H$ can be taken as a constant.
   - $U(t+dt,t)=e^{-i\frac{\hat H(t)}{\hbar}dt}$.
-  - Time-dependent evolution: $\boxed{\Ket{\Psi(t+dt)}=e^{-i\frac{\hat H(t)}{\hbar}dt}\Ket{\Psi(t)}}$.
+  - Time-dependent evolution: $\boxed{\ket{\Psi(t+dt)}=e^{-i\frac{\hat H(t)}{\hbar}dt}\ket{\Psi(t)}}$.
 
 ## Side nodes
 
@@ -180,7 +180,7 @@ https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation
   - Equation: $\displaystyle\frac{\partial^2}{\partial x^2}\psi=-k^2\psi$.
   - Solution: $x=A\cos(kx)+B\sin(kx)$.
 - What is $k$?
-  - Given $\hat H\equiv-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial{x^2}}+V(x,t)$ and $\hat H\Ket\Psi=E\Ket\Psi$,
+  - Given $\hat H\equiv-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial{x^2}}+V(x,t)$ and $\hat H\ket\Psi=E\ket\Psi$,
   - $-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial{x^2}}\psi+V\psi=E\psi$,
   - $\frac{\partial^2}{\partial{x^2}}\psi=-\frac{2m}{\hbar^2}(E-V)\psi$,
   - $\boxed{k=\sqrt{\frac{2m(E-V)}{\hbar^2}}}$,
@@ -204,13 +204,13 @@ https://en.wikipedia.org/wiki/Hamiltonian_mechanics
 
 http://www.theory.caltech.edu/~preskill/ph219/chap2_15.pdf
 
-- Quantum state evolves from time $t$ to $t'$: $\Ket{\psi(t')}=U(t',t)\Ket{\psi(t)}$.
-- Schrödinger equation: $\displaystyle i\hbar\frac{\partial}{\partial t}\Ket{\psi(t)}=H(t)\Ket{\psi(t)}$ at an instance of time.
+- Quantum state evolves from time $t$ to $t'$: $\ket{\psi(t')}=U(t',t)\ket{\psi(t)}$.
+- Schrödinger equation: $\displaystyle i\hbar\frac{\partial}{\partial t}\ket{\psi(t)}=H(t)\ket{\psi(t)}$ at an instance of time.
   - $H$ is called the *Hamiltonian* of the system, with the dimension of energy (J).
   - Let $\hbar=1$, i.e. $\mathbf H=\frac{H}{\hbar}$.
-  - $\frac{\Ket{\psi(t+dt)}-\Ket{\psi(t)}}{dt}=-i\mathbf H(t)\Ket{\psi(t)}$
-  - $\Rightarrow\Ket{\psi(t+dt)}=\Ket{\psi(t)}-i\mathbf H(t)dt\Ket{\psi(t)}$
-  - $\Rightarrow\Ket{\psi(t+dt)}=(I-i\mathbf H(t)dt)\Ket{\psi(t)}$.
+  - $\frac{\ket{\psi(t+dt)}-\ket{\psi(t)}}{dt}=-i\mathbf H(t)\ket{\psi(t)}$
+  - $\Rightarrow\ket{\psi(t+dt)}=\ket{\psi(t)}-i\mathbf H(t)dt\ket{\psi(t)}$
+  - $\Rightarrow\ket{\psi(t+dt)}=(I-i\mathbf H(t)dt)\ket{\psi(t)}$.
   - Definition: $U(t+dt,t)\equiv I-i\mathbf H(t)dt$ in the infinitestimal time period $t\to t+dt$.
     - $H=H^\dagger$
     - $U^\dagger=I+i\mathbf H^\dagger(t)dt=I+i\mathbf H(t)dt$
@@ -220,20 +220,12 @@ http://www.theory.caltech.edu/~preskill/ph219/chap2_15.pdf
   - $\mathbf H$ is Hermitian.
 
 
-
 ---
 
-## jko
+LaTeX
 
 $$
-\require{cancel}
-\newcommand{\Ket}[1]{\left|{#1}\right\rangle}
-\newcommand{\Bra}[1]{\left\langle{#1}\right|}
-\newcommand{\Braket}[1]{\left\langle{#1}\right\rangle}
 \newcommand{\Rsr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\RSR}[1]{1/\sqrt{#1}}
-\newcommand{\Verti}{\rvert}
-\newcommand{\HAT}[1]{\hat{\,#1~}}
 \newcommand{\Tr}{\mathrm{Tr}}
 $$
 

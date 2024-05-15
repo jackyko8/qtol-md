@@ -51,5 +51,53 @@ In conclusion, while it's not strictly correct to say that degeneracy cannot occ
 
 Would you like to delve deeper into how degeneracy might manifest in more specialized quantum systems or explore other related concepts in quantum mechanics?
 
+## Heisenberg picture
 
+Prompt: Could you please derive the Heisenberg picture of quantum mechanics from the Schrödinger equation?
+
+Certainly! Deriving the Heisenberg picture from the Schrödinger picture involves transitioning from a view where the state vectors evolve in time to a view where the operators evolve in time. Let's go through the derivation step by step.
+
+### Schrödinger Picture
+In the Schrödinger picture, the state of a quantum system is described by a state vector $ \psi(t) $ that evolves in time according to the time-dependent Schrödinger equation:
+$
+i\hbar \frac{d}{dt} \psi(t) = \hat{H} \psi(t)
+$
+where $ \hat{H} $ is the Hamiltonian of the system, and $ \hbar $ is the reduced Planck's constant. In this picture, operators (like position $ \hat{x} $ or momentum $ \hat{p} $) do not change with time.
+
+### Transition to the Heisenberg Picture
+1. **Definition of State Vectors and Operators**:
+   - In the Heisenberg picture, the state vectors are considered fixed at their initial values, say $ \psi(0) $, and do not evolve in time.
+   - The operators, however, evolve in time. To see how, consider an observable $ \hat{Q} $ and its expectation value in both pictures. In the Schrödinger picture:
+     $
+     \langle \psi(t) | \hat{Q} | \psi(t) \rangle
+     $
+
+2. **Defining Time-Dependent Operators in Heisenberg Picture**:
+   - We define the Heisenberg operator corresponding to $ \hat{Q} $ as:
+     $
+     \hat{Q}_H(t) = \hat{U}^\dagger(t) \hat{Q} \hat{U}(t)
+     $
+     where $ \hat{U}(t) = e^{-i\hat{H}t/\hbar} $ is the time evolution operator, satisfying the Schrödinger equation for operators $ i\hbar \frac{d}{dt}\hat{U}(t) = \hat{H} \hat{U}(t) $ and $ \hat{U}^\dagger(t) $ is its Hermitian adjoint.
+
+3. **Time Evolution of Operators**:
+   - The time derivative of $ \hat{Q}_H(t) $ is given by:
+     $
+     \frac{d}{dt} \hat{Q}_H(t) = \frac{d}{dt} \left( \hat{U}^\dagger(t) \hat{Q} \hat{U}(t) \right)
+     $
+   - Using the product rule:
+     $
+     \frac{d}{dt} \hat{Q}_H(t) = \left(\frac{d}{dt} \hat{U}^\dagger(t)\right) \hat{Q} \hat{U}(t) + \hat{U}^\dagger(t) \hat{Q} \left(\frac{d}{dt} \hat{U}(t)\right)
+     $
+   - Substituting the derivatives of $ \hat{U}(t) $ and $ \hat{U}^\dagger(t) $:
+     $
+     \frac{d}{dt} \hat{Q}_H(t) = \frac{i}{\hbar} \hat{H} \hat{U}^\dagger(t) \hat{Q} \hat{U}(t) - \frac{i}{\hbar} \hat{U}^\dagger(t) \hat{Q} \hat{U}(t) \hat{H}
+     $
+     Simplifying this using the definitions gives:
+     $
+     \frac{d}{dt} \hat{Q}_H(t) = \frac{i}{\hbar} [\hat{H}, \hat{Q}_H(t)]
+     $
+     where $ [\hat{H}, \hat{Q}_H(t)] $ is the commutator of $ \hat{H} $ and $ \hat{Q}_H(t) $.
+
+### Conclusion
+Thus, in the Heisenberg picture, the time evolution of operators is dictated by the Hamiltonian and the commutation relations with the operators themselves, contrasting with the state vector evolution in the Schrödinger picture. This transition highlights the different yet equivalent ways of understanding the dynamics in quantum mechanics, emphasizing the flexibility of the theoretical framework depending on what is most convenient for solving specific problems.
 
